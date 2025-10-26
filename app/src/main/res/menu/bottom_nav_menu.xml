@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboardFragment"
+        android:title="@string/nav_start"
+        android:icon="@drawable/ic_dashboard" />
+    <item
+        android:id="@+id/menuFragment"
+        android:title="@string/nav_menu"
+        android:icon="@drawable/ic_menu" />
+    <item
+        android:id="@+id/trainingsFragment"
+        android:title="@string/nav_trainings"
+        android:icon="@drawable/ic_trainings" />
+    <item
+        android:id="@+id/nutritionFragment"
+        android:title="@string/nav_nutrition"
+        android:icon="@drawable/ic_nutrition" />
+    <item
+        android:id="@+id/progressFragment"
+        android:title="@string/nav_progress"
+        android:icon="@drawable/ic_progress" />
+</menu>

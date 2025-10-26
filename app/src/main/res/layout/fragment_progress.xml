@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_progress_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nav_progress"
+            android:textSize="24sp"
+            android:textColor="@color/color_on_background" />
+
+        <!-- Line chart displaying weekly progress (e.g. tonnage or volume over days) -->
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart_week_progress"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent" />
+
+        <!-- Bar chart displaying reps per muscle group -->
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart_muscle_group"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/button_view_stats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/view_stats"
+            android:backgroundTint="@color/color_primary"
+            android:textColor="@color/color_on_primary" />
+
+    </LinearLayout>
+
+</ScrollView>

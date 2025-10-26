@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Simple help/question mark icon -->
+    <path
+        android:fillColor="@color/color_primary"
+        android:pathData="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20zM11 17h2v2h-2zm1-14a7 7 0 0 1 7 7c0 3.31-2.69 6-6 6H11v-2h1a4 4 0 1 0-4-4H6a6 6 0 0 1 6-6z" />
+</vector>

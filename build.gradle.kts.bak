@@ -1,0 +1,23 @@
+﻿// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// This file declares the Gradle plugin versions and repositories.  Module-specific
+// configuration is defined in the app module's build.gradle.kts.
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Android Gradle Plugin version
+        classpath("com.android.tools.build:gradle:8.2.0")
+        // Kotlin Gradle Plugin
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.20")
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}

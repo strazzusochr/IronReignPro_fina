@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.ironreignpro.ui.DashboardFragment"
+        android:label="@string/nav_start"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.ironreignpro.ui.MenuFragment"
+        android:label="@string/nav_menu"
+        tools:layout="@layout/fragment_menu" />
+
+    <fragment
+        android:id="@+id/trainingsFragment"
+        android:name="com.example.ironreignpro.ui.TrainingsFragment"
+        android:label="@string/nav_trainings"
+        tools:layout="@layout/fragment_trainings" />
+
+    <fragment
+        android:id="@+id/nutritionFragment"
+        android:name="com.example.ironreignpro.ui.NutritionFragment"
+        android:label="@string/nav_nutrition"
+        tools:layout="@layout/fragment_nutrition" />
+
+    <fragment
+        android:id="@+id/progressFragment"
+        android:name="com.example.ironreignpro.ui.ProgressFragment"
+        android:label="@string/nav_progress"
+        tools:layout="@layout/fragment_progress" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.ironreignpro.ui.SettingsFragment"
+        android:label="@string/nav_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <!-- Additional fragment for adding exercises -->
+    <fragment
+        android:id="@+id/addExerciseFragment"
+        android:name="com.example.ironreignpro.ui.AddExerciseFragment"
+        android:label="@string/qa_add_exercise"
+        tools:layout="@layout/fragment_add_exercise" />
+
+</navigation>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IronReignPro</string>
+    
+    <!-- Navigation -->
+    <string name="nav_nutrition">Nutrition</string>
+    
+    <!-- Settings -->
+    <string name="setting_ar_heatmap">AR Heatmap</string>
+    <string name="setting_irondna_score">IronDNA Score</string>
+    <string name="setting_remaining_reps">Remaining Reps</string>
+    <string name="setting_target_volume">Target Volume</string>
+    <string name="setting_weight_unit">Weight Unit</string>
+    <string name="setting_notifications">Notifications</string>
+    <string name="setting_help">Help</string>
+    
+    <!-- Values -->
+    <string name="value_irondna_score">85/100</string>
+    <string name="value_target_volume">12000 kg</string>
+    <string name="value_weight_unit">kg</string>
+    <string name="view_stats">View Stats</string>
+    
+    <!-- Exercise Fragment -->
+    <string name="exercise_title">Add Exercise</string>
+    <string name="exercise_name">Exercise Name</string>
+    <string name="exercise_details">Exercise Details</string>
+    <string name="muscle_graphic">Muscle Graphic</string>
+    <string name="timer">Timer</string>
+    <string name="stop">Stop</string>
+    
+    <!-- Dashboard Fragment -->
+    <string name="dashboard_title">Dashboard</string>
+    <string name="weekly_tonnage">Weekly Tonnage</string>
+    <string name="weekly_volume">Weekly Volume</string>
+    <string name="today_workout">Today's Workout</string>
+    <string name="today_workout_sets">3 Sets Completed</string>
+    <string name="pr_badges">PR Badges</string>
+    
+    <!-- Menu Fragment -->
+    <string name="menu_title">Menu</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="qa_log_workout">Log Workout</string>
+    <string name="qa_add_exercise">Add Exercise</string>
+    <string name="qa_record_weight">Record Weight</string>
+</resources>

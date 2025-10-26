@@ -1,0 +1,79 @@
+IronReign – Prompt für cloude.com zur automatischen Fertigstellung der App
+======================================================================
+
+**Projektübersicht**
+
+Du erhältst ein teilweise umgesetztes Android‑Projekt "IronReignPro" (siehe angehängten Quellcode). Die App soll ein professioneller Bodybuilding‑Trainer werden und orientiert sich an führenden Fitness‑Apps wie Jefit, Strong, Caliber und MyFitnessPal【953849952933233†L736-L752】【953849952933233†L813-L832】【419383076405233†L126-L149】【567059605770183†L96-L103】. Die Benutzeroberfläche basiert auf einem dunklen Material‑Design‑3‑Stil mit klarer Hierarchie, großen Überschriften (ca. 22 sp) und kontrastreichen Farben【391886072606126†L226-L244】. Alle Texte sind deutsch lokalisiert.
+
+**Zu erstellende Features**
+
+1. **3D‑ und AR‑Trainingsanleitungen**: Für jede Übung soll ein anatomisch korrektes 3D‑Modell angezeigt werden. Optionale Augmented‑Reality‑Funktionen zeigen die richtige Bewegungsausführung, inklusive Zeitlupenfunktion. Markiere die beanspruchten Muskelgruppen farblich (AR‑Muskel‑Heatmap).
+
+2. **BeastCore‑Trainingsmodus**: Integriere periodisierte Splits (Push/Pull/Legs, Pyramiden, German Volume), Maximalkraftzyklen (1RM/3RM/5RM) und Intensitätstechniken wie Drop‑Sets, Supersets und Rest‑Pause.
+
+3. **KI‑basierter Trainingsplaner**: Analysiere Trainingshistorie, Muskelimbalancen und Regenerationswerte. Nutze Wearable‑Daten (Garmin, Polar, Apple Watch) zur Plananpassung. Der Planer generiert wöchentliche Anpassungen für kontinuierliche Progression.
+
+4. **Ernährungs‑ & Supplement‑Guide (Pro Nutrition Engine)**: Berechne individuelle Makros je nach Trainingsphase, biete Rezeptvorschläge für Muskelaufbau und gib KI‑gestützte Empfehlungen zu Nahrungsergänzungsmitteln (Creatin, EAAs, ZMA, etc.).
+
+5. **Recovery‑Tools**: Implementiere Schlaf‑ und HRV‑Tracking, Muskelkater‑Protokolle, Atem‑ und Kältetraining nach Wim Hof sowie Vibrations‑/Faszien‑Routinen mit Videoanleitungen.
+
+6. **Motivation & Mindset Zone**: Baue Audioguides (Fokus, Visualisierung, Wettkampfvorbereitung), Zitate von Bodybuilding‑Legenden und eine 3D‑Körpermodell‑Visualisierung des Fortschritts ein.
+
+7. **Spezialfunktionen**: Implementiere IronDNA™ (Genotyp‑Analyse für Fast‑/Slow‑Twitch‑Dominanz), PainZone‑Challenge‑Mode (Training unter Zeitdruck mit Motivationsansagen), Team Iron (soziales Netzwerk mit Bestenlisten) und 1RM Neural Overload Tracker (Übertrainingswarnungen).
+
+**Architektur und Technik**
+
+* **Architektur**: Verwende MVVM‑Pattern mit Unidirectional Data Flow und klar getrennten Schichten (UI Layer, ViewModel, Repository). Die Datenhaltung erfolgt per Room‑Datenbank; Netzwerkzugriffe (z. B. für Nahrungsergänzungsmittel‑APIs) über Retrofit/OkHttp. ViewModel und LiveData/Flow sorgen für reaktive UI‐Updates【751054423974037†L830-L858】.
+
+* **UI‑Design**: Alle Screens folgen dem dunklen Titan‑Farbdesign (#1a1a1a Hintergrund, #62D41C Primär‑, #00C1FF Sekundär‑ und #F89831 Tertiärfarbe) mit großzügigem Spacing. Halte dich an die Material‑Design‑3‑Typografie (z. B. 22 sp für Titel, 14–16 sp für Fließtext)【236798590101914†L36-L51】. Die Startseite enthält Karten für Wochentonnage, Wochenvolumen, „Heutiges Training“ und PR‑Abzeichen. Das Menü bietet Schnellaktionen (Training loggen, Übung hinzufügen, Gewicht eintragen) und eine Navigationsliste (Trainings, Übungen, Ernährung, Fortschritt, Einstellungen, Timer, Muskel‑Heatmap, IronDNA). Die Trainingsliste zeigt Übungen mit Sätzen, Wiederholungen, Gewichten und Tempo/RPE. Der „Übung hinzufügen“-Screen enthält Video‑Platzhalter, Übungsdetails, Muskelgrafik und einen Timer.
+
+* **Code‑Qualität**: Schreibe sauberen, gut kommentierten Kotlin‑Code. Nutze Logging für Fehleranalyse und implementiere angemessene Fehlerbehandlung. Stelle sicher, dass sich die App ohne Fehler starten lässt.
+
+**Zu automatisierende Aufgaben**
+
+1. **Analy­sieren der beigefügten Projektstruktur** (`IronReignPro`): Die Ordnerstruktur umfasst bereits die wichtigsten Pakete, Layouts und Ressourcen (siehe Anhang). Identifiziere vorhandene Klassen (`MainActivity`, `MainViewModel`, `DashboardFragment`, `MenuFragment`, `TrainingsFragment`, `AddExerciseFragment`, `NutritionFragment`, `ProgressFragment`, `SettingsFragment`), XML‑Layouts und Ressourcen wie Farben, Strings, Icons.
+
+2. **Validiere und vervollständige den Code**: Überprüfe jede Datei auf fehlende Strings, falsche Theme‑Verweise (z. B. Material 3 TextAppearances) und fehlende Ressourcen. Simuliere die App‑Ausführung (z. B. Unit‑Tests) und behebe auftretende Fehlermeldungen, z. B. `Resources.NotFoundException`. Ergänze das `strings.xml` um fehlende Einträge (z. B. `nav_exercises`) und passe das Theme auf `Theme.MaterialComponents.DayNight.NoActionBar` an, damit es mit der Material‑Library kompatibel ist.
+
+3. **Erweitere die Implementierung**: Füge die in den Hauptfunktionen beschriebenen Features hinzu. Implementiere die ViewModel‑Logik, Room‑Datenbank (Entities, DAO, Repository) für Übungen, Workouts, Mahlzeiten und Messdaten. Entwickle ein Onboarding, Trainingseinheiten‑Planer, Fortschrittsdiagramme, Ernährungstracker und Spezialfeatures wie IronDNA.
+
+4. **Assets & Icons**: Generiere oder finde passende 3D‑Modelle, AR‑Overlays, Icons (Dumbbell, Timer, Heatmap, DNA‑Helix, etc.) und ersetze Platzhaltergrafiken. Nutze bei Bedarf die Cloud‑Funktionen zum Hochladen von Assets.
+
+5. **Finaler Build**: Konfiguriere `build.gradle.kts` (Project‑ & App‑Level), `AndroidManifest.xml` (Permissions), `gradle.properties` und `settings.gradle.kts`. Führe `./gradlew assembleDebug` aus, um eine signierte Debug‑APK zu generieren. Baue eine Release‑APK mit eigenem Keystore für den Play‑Store.
+
+**Wichtig:** Die fertige App muss optisch exakt dem im Anhang gezeigten UI‑Mockup entsprechen und alle oben beschriebenen Profi‑Features enthalten. Jede Änderung am Code soll überprüft und simuliert werden, um sicherzustellen, dass keine Laufzeitfehler auftreten.
+
+**Bereitgestellte Dateien**
+
+Der Anhang enthält den Ordner `IronReignPro` mit folgender Struktur (Auszug):
+
+```
+IronReignPro/
+  ├── settings.gradle.kts
+  ├── build.gradle.kts
+  ├── gradle.properties
+  ├── app/
+  │   ├── build.gradle.kts
+  │   ├── proguard-rules.pro
+  │   ├── src/main/
+  │   │   ├── AndroidManifest.xml
+  │   │   ├── java/com/example/ironreignpro/
+  │   │   │   ├── MainActivity.kt
+  │   │   │   ├── MainViewModel.kt
+  │   │   │   └── ui/
+  │   │   │       ├── DashboardFragment.kt
+  │   │   │       ├── MenuFragment.kt
+  │   │   │       ├── TrainingsFragment.kt
+  │   │   │       ├── AddExerciseFragment.kt
+  │   │   │       ├── NutritionFragment.kt
+  │   │   │       ├── ProgressFragment.kt
+  │   │   │       └── SettingsFragment.kt
+  │   │   └── res/
+  │   │       ├── layout/ …
+  │   │       ├── values/ …
+  │   │       ├── drawable/ …
+  │   │       ├── menu/
+  │   │       └── navigation/
+```
+
+Nutze diese Vorarbeit als Ausgangspunkt. Vervollständige und erweitere den Code gemäß den oben definierten Anforderungen. Stelle sicher, dass der Build nach deinen Änderungen ohne Fehlermeldungen durchläuft und die App die spezifizierten Funktionen aufweist.
